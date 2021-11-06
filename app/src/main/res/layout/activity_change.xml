@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChangeActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meal"
+        android:textSize="25sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description:"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"/>
+
+    <EditText
+        android:id="@+id/edDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintLeft_toRightOf="@id/tvDescription"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvDescription"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/tvTextColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextColor:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/tvDescription"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription"
+        android:layout_marginTop="30dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgTextColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/edDescription"
+        app:layout_constraintTop_toBottomOf="@id/edDescription"
+        android:layout_marginTop="10dp">
+
+        <RadioButton
+            android:id="@+id/rdRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Red" />
+
+        <RadioButton
+            android:id="@+id/rdGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Green" />
+
+        <RadioButton
+            android:id="@+id/rdMagenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Magenta"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvBackColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Background Color:"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/tvTextColor"
+        app:layout_constraintStart_toStartOf="@id/tvDescription"
+        android:layout_marginTop="30dp" />
+
+    <RadioGroup
+        android:id="@+id/rgBackColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/rgTextColor"
+        app:layout_constraintLeft_toRightOf="@id/tvBackColor"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp">
+
+        <RadioButton
+            android:id="@+id/rdYellow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yellow" />
+
+        <RadioButton
+            android:id="@+id/rdWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="White" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Return"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

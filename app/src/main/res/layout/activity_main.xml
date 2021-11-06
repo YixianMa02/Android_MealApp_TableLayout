@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="horizontal"
+    android:baselineAligned="false"
+    style="@style/appBorder">
+
+    <LinearLayout
+        android:id="@+id/linerBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1.03"
+            style="@style/heading"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            style="@style/heading2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BREAKFAST"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            style="@style/heading2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LUNCH"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            style="@style/heading2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SNACK"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/linerBar"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="5.5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="7.5"
+            style="@style/heading2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MENU"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:stretchColumns="*"
+            style="@style/appBorder">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="MONDAY"
+                    style="@style/heading" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="TUESDAY"
+                    style="@style/heading"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="WEDNESDAY"
+                    style="@style/heading"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="THURSDAY"
+                    style="@style/heading"/>
+
+                <TextView
+                    
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="FRIDAY"
+                    style="@style/heading" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tvMonTuesB"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="......"
+                    android:layout_span="2"
+                    style="@style/table"/>
+
+                <TextView
+                    android:id="@+id/tvWedB"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="......"
+                    style="@style/table"/>
+
+                <TextView
+                    android:id="@+id/tvThurFriB"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="......"
+                    android:layout_span="2"
+                    style="@style/table2"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tvMonL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="......"
+                    style="@style/table"/>
+
+                <TextView
+                    android:id="@+id/tvTuesL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="......"
+                    style="@style/table2"/>
+
+                <TextView
+                    android:id="@+id/tvWedL"
+                    style="@style/table"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="......" />
+
+                <TextView
+                    android:id="@+id/tvThurL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="......"
+                    style="@style/table2"/>
+
+                <TextView
+                    android:id="@+id/tvFriL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="......"
+                    style="@style/table"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tvMonS"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="......"
+                    style="@style/table"/>
+
+                <TextView
+                    android:id="@+id/tvTuesWedS"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="......"
+                    android:layout_span="2"
+                    style="@style/table2"/>
+
+                <TextView
+                    android:id="@+id/tvThurFriS"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="......"
+                    android:layout_span="2"
+                    style="@style/table"/>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
